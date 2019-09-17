@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.9.14)  17 SEP 2019 21:27
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.9.14)  18 SEP 2019 00:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**e:/MathProofbranch/Proof
-(e:/MathProofbranch/Proof.tex
+**e:/latex/mathproof/Proof
+(e:/latex/mathproof/Proof.tex
 LaTeX2e <2018-12-01>
 (./elegantnote.cls
 Document Class: elegantnote 2013/07/18 v1.00 elegant note document class
@@ -1077,7 +1077,7 @@ File: xunicode.sty 2011/09/09 v0.981 provides access to latin accents and many o
 *** Reloading Xunicode for encoding 'TU' ***
 ) (d:/texlive/2019/texmf-dist/tex/xelatex/xecjk/xunicode-extra.def
 File: xunicode-extra.def 2019/04/07 v3.7.2 extra definition for xunicode
-) (./Proof.aux)
+) (./Proof.aux (./chapter3.aux))
 \openout1 = `Proof.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
@@ -1116,12 +1116,10 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 31.
 LaTeX Info: Redefining \pageref on input line 31.
 LaTeX Info: Redefining \nameref on input line 31.
+ (./Proof.out) (./Proof.out)
 \@outlinefile=\write4
 \openout4 = `Proof.out'.
 
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1205,6 +1203,7 @@ File: ./figure/cover.PDF Graphic file (type pdf)
 ]
 File: ./figure/cyanbase.pdf Graphic file (type pdf)
 <use ./figure/cyanbase.pdf>
+ (./Proof.toc)
 \tf@toc=\write5
 \openout5 = `Proof.toc'.
 
@@ -1248,92 +1247,53 @@ Package fontspec Info: Font family '方正中等线简体(0)' created for font '
 
 
 ]
-
-LaTeX Warning: Reference `LastPage' on page 4 undefined on input line 80.
-
 File: ./figure/cyanbase.pdf Graphic file (type pdf)
 <use ./figure/cyanbase.pdf>
-[4]
+ [4]
 Missing character: There is no 分 in font cmr12!
-
-
-LaTeX Warning: Reference `LastPage' on page 5 undefined on input line 131.
-
 File: ./figure/cyanbase.pdf Graphic file (type pdf)
 <use ./figure/cyanbase.pdf>
-[5]
-
-LaTeX Warning: Reference `LastPage' on page 6 undefined on input line 186.
-
+ [5]
 File: ./figure/cyanbase.pdf Graphic file (type pdf)
 <use ./figure/cyanbase.pdf>
-[6]
-
-LaTeX Warning: Reference `LastPage' on page 7 undefined on input line 233.
-
+ [6]
 File: ./figure/cyanbase.pdf Graphic file (type pdf)
 <use ./figure/cyanbase.pdf>
-[7]
-
-LaTeX Warning: Reference `LastPage' on page 8 undefined on input line 279.
-
+ [7]
 File: ./figure/cyanbase.pdf Graphic file (type pdf)
 <use ./figure/cyanbase.pdf>
-[8]
+ [8]
 Missing character: There is no 为 in font cmr12!
 Missing character: There is no 常 in font cmr12!
 Missing character: There is no 数 in font cmr12!
 
-Overfull \hbox (0.80103pt too wide) in paragraph at lines 318--319
+Overfull \hbox (0.80103pt too wide) in paragraph at lines 321--322
 []\TU/华文中宋(0)/m/n/12 设 $\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )$ \TU/华文中宋(0)/m/n/12 在 $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 a; \OT1/cmr/m/n/12 +\OMS/cmsy/m/n/12 1\OT1/cmr/m/n/12 )$ \TU/华文中宋(0)/m/n/12 内 可 导，|  则 $[] \OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )$ \TU/华文中宋(0)/m/n/12 与 $[] \OML/cmm/m/it/12 f[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )$ \TU/华文中宋(0)/m/n/12 都 存 在，|  证 明 $[] \OML/cmm/m/it/12 f[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) =
  []
-
-
-LaTeX Warning: Reference `LastPage' on page 9 undefined on input line 333.
 
 File: ./figure/cyanbase.pdf Graphic file (type pdf)
 <use ./figure/cyanbase.pdf>
 [9])
-
-LaTeX Warning: Reference `LastPage' on page 10 undefined on input line 37.
-
 File: ./figure/cyanbase.pdf Graphic file (type pdf)
 <use ./figure/cyanbase.pdf>
-[10]
-
-Package lastpage Warning: Rerun to get the references right on input line 41.
-
-
+ [10] 
 AED: lastpage setting LastPage
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 41.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 41.
 (./Proof.aux (./chapter3.aux))
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 41.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 41.
-
-
-Package rerunfilecheck Warning: File `Proof.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Proof.out':
-(rerunfilecheck)             Before: 
-(rerunfilecheck)             After:  548722275A956EFD266484378C998045.
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+Package rerunfilecheck Info: File `Proof.out' has not changed.
+(rerunfilecheck)             Checksum: 548722275A956EFD266484378C998045.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 41.
  ) 
 Here is how much of TeX's memory you used:
- 40719 strings out of 492922
- 818004 string characters out of 6136751
- 908205 words of memory out of 5000000
- 44185 multiletter control sequences out of 15000+600000
+ 40749 strings out of 492922
+ 819246 string characters out of 6136751
+ 909218 words of memory out of 5000000
+ 44207 multiletter control sequences out of 15000+600000
  545845 words of font info for 135 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 62i,15n,92p,523b,446s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,14n,92p,523b,471s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on Proof.pdf (10 pages).
