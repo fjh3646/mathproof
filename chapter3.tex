@@ -25,9 +25,18 @@
 	设$f(x)$在$[0,1]$上连续，在$(0,1)$内可导，且$f(0)=f(1)=0$，试证明：若存在$x_0\in(0,1)$使得$f(x_0)>x_0$，则必然存在$\xi\in(0,1)$使得$f'(\xi)=1$。
 \end{example}
 	\begin{newproof}
+		令\[F\left( x \right) =f\left( x \right) -x,x\in \left[ \text{0,}1 \right] \]
+		则\[F\left( x_0 \right) =f\left( x_0 \right) -x_0>\text{0,}F\left( 1 \right) =f\left( 1 \right) -1=-1<0\]
+		则\[F\left( x_0 \right) F\left( 1 \right) <0\]
+		又$F\left( x \right) \text{在}\left[ x_0,1 \right] \text{连续}$，由零点存在定理\[\exists a\in \left( x_0,1 \right) \]
+		使得\[F\left( a \right) =0\]
+		因\[F\left( 0 \right) =0=F\left( a \right) ,F\left( x \right) \text{在}\left[ \text{0,}a \right] \text{上连续，}\left( \text{0,}a \right) \text{可导}\]
+		由罗尔定理\[\exists \xi \in \left( \text{0,}a \right) \subset \left( \text{0,}1 \right) \]
+		使得\[F'\left( \xi \right) =0\Rightarrow f'\left( \xi \right) =1\]
 		
 	\end{newproof}
 
+%3
 \begin{example}
 	假设$f(x)$和$g(x)$在$[a,b]$上存在二阶导数，并且$g''(x)\neq 0$，$f(a)=f(b)=g(a)=g(b)=0$，试证明
 	\begin{enumerate}
@@ -35,7 +44,26 @@
 		\item 在$(a,b)$内至少有一点$\xi$使得$\frac{f(\xi)}{g(\xi)}=\frac{f''(\xi)}{g''(\xi)}$。
 	\end{enumerate}
 \end{example}
+	\begin{newproof}
+		\begin{enumerate}
+			\item 若\[\exists x_0\in \left( a,b \right) \]
+			使得\[g\left( x_0 \right) =0\]
+			那么有\[g\left( a \right) =g\left( x_0 \right) =g\left( b \right) \]
+			因\[g\left( x \right) \text{在}\left( a,x_0 \right) \text{连续，}\left( a,x_0 \right) \text{可导，}\left[ x_0,b \right] \text{连续，}\left( x_0,b \right) \text{可导}\]
+			由罗尔定理\[\exists x_3\in \left( x_1,x_2 \right) \]
+			使\[g^{''}\left( x_3 \right) =0\]
+			这与$g^{''}\left( x \right) \ne 0$矛盾，故\[g\left( x \right) \ne 0\]
 
+			\item 令\[F\left( x \right) =f\left( x \right) g'\left( x \right) -g\left( x \right) f'\left( x \right) \]
+			因\[F\left( a \right) =F\left( b \right) =\text{0,}F\left( x \right) \text{在}\left[ a,b \right] \text{上连续，}\left( a,b \right) \text{内可导}\]
+			故\[\exists \xi \in \left( a,b \right) \]
+			使\[F'\left( \xi \right) =0\]
+			即\[\frac{f\left( \xi \right)}{g\left( \xi \right)}=\frac{f^{''}\left( \xi \right)}{g^{''}\left( \xi \right)}\text{成立}\]
+			
+		\end{enumerate}
+		
+	\end{newproof}
+%4
 \begin{example}
 	设$f(x)$在$[0,+\infty)$上可导，且$0\leqslant f(x)\leqslant\frac{x}{1+x^2}$，试证明$\exists\xi\in(0,+\infty)$是$f'(\xi)=\frac{1-\xi^2}{(1+\xi^2)^2}$。
 \end{example}
