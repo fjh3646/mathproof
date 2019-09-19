@@ -61,33 +61,151 @@
 			即\[\frac{f\left( \xi \right)}{g\left( \xi \right)}=\frac{f^{''}\left( \xi \right)}{g^{''}\left( \xi \right)}\text{成立}\]
 			
 		\end{enumerate}
-		
 	\end{newproof}
+	\begin{note}
+	$\frac{f\left( \xi \right)}{g\left( \xi \right)}=\frac{f^{''}\left( \xi \right)}{g^{''}\left( \xi \right)}\Longleftrightarrow f\left( \xi \right) g^{''}\left( \xi \right) -g\left( \xi \right) f^{''}\left( \xi \right) =0$
+	\begin{align*}
+		\int{\left[ f\left( x \right) g^{''}\left( x \right) -g\left( x \right) f^{''}\left( x \right) \right]dx}
+		= {}&
+		\int{f\left( x \right) dg'\left( x \right) -\int{g\left( x \right) df'\left( x \right)}}\\
+		={}&
+		f\left( x \right) g'\left( x \right) -\int{g'\left( x \right) f'\left( x \right) dx}-g\left( x \right) f'\left( x \right) +\int{f'\left( x \right)}g'\left( x \right) dx\\
+		={}&
+		f\left( x \right) g'\left( x \right) -g\left( x \right) f'\left( x \right) 
+	\end{align*}
+	\end{note}
 %4
 \begin{example}
 	设$f(x)$在$[0,+\infty)$上可导，且$0\leqslant f(x)\leqslant\frac{x}{1+x^2}$，试证明$\exists\xi\in(0,+\infty)$是$f'(\xi)=\frac{1-\xi^2}{(1+\xi^2)^2}$。
 \end{example}
+	\begin{newproof}
+		令\[F\left( x \right) =f\left( x \right) -\frac{x}{1+x^2},x\in \left[ \text{0,}\left. +\infty \right) \right. \]
+		因\[0\leqslant f\left( x \right) \leqslant \frac{x}{1+x^2}\text{且}\underset{x\rightarrow +\infty}{\lim}\frac{x}{1+x^2}=0\]
+		由迫敛性知\[\underset{x\rightarrow +\infty}{\lim}f\left( x \right) =0\]
+		即有\[\underset{x\rightarrow +\infty}{\lim}F\left( x \right) =\underset{x\rightarrow +\infty}{\lim}\left[ f\left( x \right) -\frac{x}{1+x^2} \right] =0\]
+		因\[F\left( 0 \right) =f\left( 0 \right) \geqslant \text{0,}\forall x\in \left( \text{0,}+\infty \right) \]
+		有\[F\left( x \right) \leqslant 0\]
+		又\[F\left( x \right) \text{在}\left[ \text{0,}+\infty \right] \text{连续}\]
+		由零点存在定理\[\exists x_0\in \left[ \text{0,}+\infty \right] \]
+		使\[F\left( x_0 \right) =0\]
+		因\[F\left( x_0 \right) =\lim_{x\rightarrow +\infty} f\left( x \right) =\text{0且}F\left( x \right) \text{在}\left[ x_0 \right. ,\left. +\infty \right) \text{连续，}\left[ x_0 \right. ,\left. +\infty \right) \text{可导}\]
+		由广义罗尔定理\[\exists \xi \in \left( x_0,+\infty \right) \]
+		使\[F'\left( \xi \right) =0\]
+		即\[f'\left( \xi \right) =\frac{1-\xi ^2}{\left( 1+\xi ^2 \right) ^2}\]
+	\end{newproof}
 
+%5
 \begin{example}
 	设$f(x)$在$[a,b]$上连续，在$(a,b)$内可导，试证明$\exists\xi(a,b)$，使得\[f'(\xi)=\frac{f(\xi)-f(a)}{b-\xi}\]
 \end{example}
+	\begin{newproof}
+		令\[F\left( x \right) =\left( b-x \right) f\left( x \right) +f\left( a \right) x\]
+		有\[F\left( a \right) =\left( b-a \right) f\left( a \right) +f\left( a \right) \cdot a=bf\left( a \right) \]
+		\[F\left( b \right) =F\left( a \right) b=F\left( a \right) \]
+		又\[F\left( x \right) \text{在}\left[ a,b \right] \text{连续，}\left( a,b \right) \text{内可导}\]
+		由罗尔定理\[\exists \xi \in \left( a,b \right) \]
+		使\[F'\left( \xi \right) =0\]
+		即\[f'\left( \xi \right) =\frac{f\left( \xi \right) -f\left( a \right)}{b-\xi}\]
+	\end{newproof}
 
+%6
 \begin{example}
 	设$f(x)$在$[a,b]$上连，在$(a,b)$内可导，试证明$\exists\xi\in(a,b)$使得\[\frac{bf(b)-af(a)}{b-a}=f(\xi)+\xi f'(\xi)\]
 \end{example}
+	\begin{newproof}
+		\begin{itemize}
+			\item[方法一] 令\[\text{令}F\left( x \right) =xf\left( x \right) \,\,  x\in \left[ a,b \right] \]
+			因\[F\left( x \right) \text{在}\left[ a,b \right] \text{上连续，}\left( a,b \right) \text{内可导}\]
+			由拉格朗日中值定理\[F\left( b \right) -F\left( b \right) =F'\left( \xi \right) \left( b-a \right) \text{，其中}a<\xi <b\]
+			即\[\frac{bf\left( b \right) -af\left( a \right)}{b-a}=f\left( \xi \right) +\xi f'\left( \xi \right) \]
+			\begin{note}
+				对于$\frac{bf\left( b \right) -af\left( a \right)}{b-a}$，分子形式为$xf\left( x \right) $，而分母恰是端点$a,b$之差所以联想到拉格朗日中值定理或柯西中值定理
+			\end{note}
+			\item[方法二] 令\[F\left( x \right) =\frac{bf\left( b \right) -af\left( a \right)}{b-a}\left( x-a \right) -xf\left( x \right) \,\,  x\in \left[ a,b \right] \]
+			有\[F\left( a \right) =-af\left( a \right) ,F\left( b \right) =-af\left( a \right) =F\left( a \right) \]
+			因\[F\left( x \right) \text{在}\left[ a,b \right] \text{上连续，}\left( a,b \right) \text{内可导}\]
+			由罗尔定理\[\exists \xi \in \left( a,b \right) \]
+			使得\[F'\left( \xi \right) =0\Longrightarrow \frac{bf\left( b \right) -af\left( a \right)}{b-a}=f\left( \xi \right) +\xi f'\left( \xi \right) \]
+			\begin{note}
+				由\[\frac{bf\left( b \right) -af\left( a \right)}{b-a}=f\left( \xi \right) +\xi f'\left( \xi \right) \]
+				积分得到\[\int{\frac{bf\left( b \right) -af\left( a \right)}{b-a}dx}=\int{\left[ f\left( x \right) +xf'\left( x \right) \right] dx}\]
+				即\[\frac{bf\left( b \right) -af\left( a \right)}{b-a}\left( x-a \right) -xf\left( x \right) =C\]
+			\end{note}
+		\end{itemize}
+	\end{newproof}
 
+%7
 \begin{example}
 	设$f(x)$，$g(x)$都在$[a,b]$上连续，在$(a,b)$内可导，且$g(x)\neq=0$，$f(a)g(b)=g(a)f(b)$，试证明至少存在一点$\xi\in(a,b)$，使得$f'(\xi)g(\xi)=f(\xi)g'(\xi)$。
 \end{example}
-
+	\begin{newproof}
+		令\[F\left( x \right) =\frac{f\left( x \right)}{g\left( x \right)}\,\, x\in \left[ a,b \right] \]
+		因\[f\left( a \right) f\left( b \right) =g\left( a \right) g\left( b \right) \]
+		故\[\frac{f\left( a \right)}{g\left( a \right)}=\frac{f\left( b \right)}{g\left( b \right)}\]
+		即\[F\left( a \right) =F\left( b \right) \]
+		因\[F\left( x \right) \text{在}\left[ a,b \right] \text{连续，}\left( a,b \right) \text{内可导}\]
+		由罗尔定理\[\exists \xi \in \left( a,b \right) \]
+		使\[F'\left( \xi \right) =0\]
+		即\[f'\left( \xi \right) g\left( \xi \right) =f\left( \xi \right) g'\left( \xi \right) \]
+	\end{newproof}
+	\begin{note}
+		\begin{align*}
+			f'\left( \xi \right) g\left( \xi \right) =f\left( \xi \right) g'\left( \xi \right)
+			\Longrightarrow {}&
+			\frac{f'\left( x \right)}{f\left( x \right)}=\frac{g'\left( x \right)}{g\left( x \right)}\\
+			\Longrightarrow {}&
+			\int{\frac{f'\left( x \right)}{f\left( x \right)}}dx=\int{\frac{g'\left( x \right)}{g\left( x \right)}dx}\\
+			\Longrightarrow {}&
+			\ln \left| f\left( x \right) \right|=\ln \left| g\left( x \right) \right|+\ln\text{|}C|\\
+			\Longrightarrow {}&
+			\frac{f\left( x \right)}{g\left( x \right)}=C
+		\end{align*}
+		故构造\[F\left( x \right) =\frac{f\left( x \right)}{g\left( x \right)}\]
+	\end{note}
+%8
 \begin{example}
 	设$f(x)$，$g(x)$在$(-\infty,+\infty)$内可导，且对一切$x$都有$f'(x)g(x)\neq f(x)g'(x)$，证明方程$f(x)=0$的任何两个不同的根之间必有$g(x)=0$的根。
 \end{example}
-
+	\begin{newproof}
+		设方程$f(x) = 0$的任意某两根为$x_1,x_2\left( x_1<x_2 \right) $
+		则\[f\left( x_1 \right) =f\left( x_2 \right) =0\]
+		[\bf $\text{只要证明：}\exists x_0\in \left[ x_1,x_2 \right] ,\text{使}g\left( x_0 \right) =\text{0即可}$]\\
+		如果不存在\[x_0\in \left[ x_1,x_2 \right] \]
+		使\[g\left( x \right) \not \equiv 0\]
+		令\[F\left( x \right) =\frac{f\left( x \right)}{g\left( x \right)}\]
+		因\[F\left( x_1 \right) =F\left( x_2 \right) =\text{0且}F\left( x \right) \text{在}\left[ x_1,x_2 \right] \text{连续,}\left( x_1,x_2 \right) \text{内可导}\]
+		故由罗尔定理\[\exists \xi \in \left( x_1,x_2 \right) \]
+		使\[f'\left( \xi \right) g\left( \xi \right) -g'\left( \xi \right) f\left( \xi \right) =\text{0成立}\]
+		这与题设矛盾，故\[\exists x_0\in \left( x_1,x_2 \right) \]
+		使\[g\left( x_0 \right) =0\]
+		得证
+	\end{newproof}
+%9
 \begin{example}
 	设$f(x)$在$[0,a]$上连续，在$(0,a)$内可导，$f(a)=0$证明$\forall\alpha\in(0,+\infty)$，总存在$\xi\in(0,a)$，使得$\alpha f(\xi)+\xi f'(\xi)=0$。
 \end{example}
+	\begin{newproof}
+		令\[F\left( x \right) =x^{\alpha}f\left( x \right) \,\,      x\in \left[ \text{0,}a \right] \]
+		因\[F\left( 0 \right) =F\left( a \right) =\text{0且}F\left( x \right) \text{在}\left[ \text{0,}a \right] \text{上连续，}\left( \text{0,}a \right) \text{内可导}\]
+		故由罗尔定理\[\exists \xi \in \left( \text{0,}a \right) \]
+		使\[F'\left( \xi \right) =0\]
+		即\[\alpha f\left( \xi \right) +\xi f'\left( \xi \right) =0\]
+	\end{newproof}
+	\begin{note}
+		\begin{align*}
+			\alpha f\left( \xi \right) +\xi f'\left( \xi \right) =0
+			\Longrightarrow {}&	
+			\frac{f'\left( \xi \right)}{f\left( \xi \right)}=-\frac{\alpha}{\xi}\\
+			\Longrightarrow {}&	
+			\int{\frac{f'\left( \xi \right)}{f\left( \xi \right)}dx}=-\int{\frac{\alpha}{x}dx}\\
+			\Longrightarrow {}&	
+			\ln\text{|}f\left( x \right) |=-\alpha \ln\text{|}x|+\ln\text{|}C|\\
+			\Longrightarrow {}&	
+			x^{\alpha}f\left( x \right) =C	
+		\end{align*}
+	\end{note}
 
+%10
 \begin{example}
 	设$f(x)$在$[a,b]$上连续，在$(a,b)$内可导，$\lambda$为实数，$f(a)=f(b)=0$，证明$\exists\xi\in(a,b)$，使得$\lambda f(\xi)+f'(\xi)=0$。
 \end{example}
