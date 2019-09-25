@@ -503,59 +503,220 @@
 \begin{example}
 	设$f(x)$在$[a,b]$上连续，在$(a,b)$内可导，且$f(a)f(b)>0$，$f(a)f(\frac{a+b}{2})<0$，证明对任何实数$k$，必定存在$\xi\in(a,b)$，使得$f'(\xi)=kf(\xi)$。
 \end{example}
+	\begin{newproof}
+		令\[F\left( x \right) =e^{-kx}f\left( x \right) \,\,     x\in \left[ a,b \right] \]
+		不妨设\[f\left( a \right) >0\]
+		则由题意知\[f\left( b \right) >0,f\left( \frac{a+b}{2} \right) <0\]
+		即\[f\left( a \right) f\left( \frac{a+b}{2} \right) <0,   f\left( \frac{a+b}{2} \right) f\left( b \right) <0\]
+		因\[f\left( x \right) \text{在}\left[ a,\frac{a+b}{2} \right] ,\left[ \frac{a+b}{2},b \right] \text{上连续}\]
+		由零点存在定理\[\exists x_1\in \left( a,\frac{a+b}{2} \right) ,x_2\in \left( \frac{a+b}{2},b \right) \]
+		使得\[f\left( x_1 \right) =f\left( x_2 \right) =0\]
+		即\[F\left( x_1 \right) =F\left( x_2 \right) =0\]
+		又因\[F\left( x \right) \text{在}\left[ x_1,x_2 \right] \text{上连续，}\left( x_1,x_2 \right) \text{上可导}\]
+		由罗尔定理\[\exists \xi \in \left( x_1,x_2 \right) \]
+		使得\[F'\left( \xi \right) =0\]
+		即\[e^{-k\xi}\left[ f'\left( \xi \right) -kf\left( \xi \right) \right] =0\]
+		又\[e^{-k\xi}>0\]
+		故\[f'\left( \xi \right) =kf\left( \xi \right) \]
+		得证
+	\end{newproof}
 
+%20
 \begin{example}
 	设$f(\xi)$在闭区间$[a,b]$上连续，在$(a,b)$内可导，且$f(a)=f(b)=\frac{a}{2}$，$f(\frac{a+b}{2})=a+b$，其中$0<a<b$，证明对任意的$\lambda$，存在$\xi\in(a,b)$，使得\[f'(\xi)=\lambda\left[f(\xi)-\frac{1}{2}\xi\right]+\frac{1}{2}\]
 \end{example}
+	\begin{newproof}
+		令\[F\left( x \right) =e^{-\lambda x}\left[ f\left( x \right) -\frac{x}{2} \right] \,\,   g\left( x \right) =f\left( x \right) -\frac{x}{2}\]
+		由题意得\[g\left( a \right) =f\left( a \right) -\frac{a}{2}=0\text{，}g\left( b \right) =f\left( b \right) -\frac{b}{2}=\frac{a-b}{2}<0\text{，}g\left( \frac{a+b}{2} \right) =f\left( \frac{a+b}{2} \right) -\frac{a+b}{4}>0\]
+		得\[g\left( b \right) g\left( \frac{a+b}{2} \right) <0\]
+		因\[g\left( x \right) \text{在}\left[ \frac{a+b}{2},b \right] \text{上连续}\]
+		由零点存在定理\[\exists x_1\in \left( \frac{a+b}{2},b \right) \]
+		使得\[g\left( x_1 \right) =0\]
+		故\[F\left( a \right) =F\left( x_1 \right) =0\]
+		又\[F\left( x \right) \text{在}\left[ a,x_1 \right] \text{连续}\left( a,x_1 \right) \text{可导}\]
+		由罗尔定理\[\exists \xi \in \left( a,x_1 \right) \]
+		使\[F'\left( \xi \right) =0\]
+		即\[e^{-\lambda \xi}\left[ f^{''}\left( \xi \right) -\frac{1}{2}-\lambda \left( f'\left( \xi \right) -\frac{\xi}{2} \right) \right] =0\]
+		即\[f'\left( \xi \right) =\lambda \left[ f\left( \xi \right) -\frac{\xi}{2} \right] +\frac{1}{2}\]
 
+	\end{newproof}
+%21
 \begin{example}
 	设$f(x)$在$[0,1]$上具有二阶导数，且$f'(0)=0$，试证明存在$\xi\in(0,1)$，使$f''(\xi)=\frac{2f'(\xi)}{1-\xi}$。
 \end{example}
+	\begin{newproof}
+		令\[F\left( x \right) =\left( 1-x \right) ^2f'\left( x \right) \,\,   x\in \left[ 0,1 \right] \]
+		因\[F\left( 0 \right) =F\left( 1 \right) =0\text{且}F\left( x \right) \text{在}\left[ 0,1 \right] \text{连续，}\left( 0,1 \right) \text{可导}\]
+		由罗尔定理\[\exists \xi \in \left( 0,1 \right) \]
+		使\[F'\left( \xi \right) =0\]
+		即\[-2\left( 1-\xi \right) f'\left( \xi \right) +\left( 1-\xi \right) ^2f^{''}\left( \xi \right) =0\]
+		又\[1-\xi \ne 0\]
+		故\[f^{''}\left( \xi \right) =\frac{2f'\left( \xi \right)}{1-\xi}\]
+		得证
 
+	\end{newproof}
+
+%22
 \begin{example}
 	设$f(x)$在$[0,1]$上具有二阶导数，且$f(0)=f(1)=0$，试证明存在$\xi\in(0,1)$，使$f''(\xi)=\frac{2f'(\xi)}{1-\xi}$。
 \end{example}
+	\begin{newproof}
+		令\[F\left( x \right) =\left( 1-x \right) ^2f'\left( x \right) \]
+		因\[f\left( 0 \right) =f\left( 1 \right) =0\text{且}f\left( x \right) \text{在}\left[ 0,1 \right] \text{连续，}\left( 0,1 \right) \text{可导}\]
+		由罗尔定理\[\exists \xi \in \left( \xi ,1 \right) \]
+		使\[F'\left( \xi \right) =0\]
+		即\[-2\left( 1-\xi \right) f'\left( \xi \right) +\left( 1-\xi \right) ^2f^{''}\left( \xi \right) =0\]
+		又\[1-\xi \ne 0\]
+		故\[f^{''}\left( \xi \right) =\frac{2f'\left( \xi \right)}{1-\xi}\]
+		得证
+	\end{newproof}
 
+%23
 \begin{example}
 	设$f(x)$在$[a,b]$上具有二阶导数，$f(0)=f(1)=f'(0)=f'(1)$，证明存在$\xi\in(0,1)$，使得$f''(\xi)=f(\xi)$。
 \end{example}
+	\begin{newproof}
+		令\[F\left( x \right) =e^x\left[ f'\left( x \right) -f\left( x \right) \right] \]
+		因\[F\left( 0 \right) =F\left( 1 \right) =0\text{且}F\left( x \right) \text{在}\left[ 0,1 \right] \text{连续，}\left( 0,1 \right) \text{可导}\]
+		由罗尔定理\[\exists \xi \in \left( 0\text{，}1 \right) \]
+		使\[F'\left( \xi \right) =0\]
+		即\[e^{\xi}\left[ f^{''}\left( \xi \right) -f'\left( \xi \right) +f'\left( \xi \right) -f\left( \xi \right) \right] =0\]
+		又\[e^{\xi}>0\]
+		即\[f^{''}\left( \xi \right) =f\left( \xi \right) \]
+		得证
+	\end{newproof}
 
-\begin{example}
-	设$f'(x)$在$[a,b]$上连续，$f(x)$在$(a,b)$内二阶可导，$f(a)=f(b)=0$，且有$\int_{a}^{b}f(x)\diff x=0$，证明
-	\begin{enumerate}
-		\item 在$(a,b)$内至少存在一点$\xi$，使得$f'(\xi)=f(\xi)$；
-		\item 在$(a,b)$内至少存在一点$\eta$，$\eta\neq\xi$，使得$f''(\eta)=f(\eta)$。
-	\end{enumerate}
-\end{example}
-
+%24
 \begin{example}
 	设$f(x)$，$g(x)$在$[a,b]$上连续，在$(a,b)$内具有二阶导数，且存在相等的最大值，又$f(a)=g(a)$，$f(b)=g(b)$，证明存在$\xi\in(a,b)$，使得$f''(\xi)=g''(\xi)$。
 \end{example}
+	\begin{newproof}
+		令\[F\left( x \right) =f\left( x \right) -g\left( x \right) , x\in \left[ a,b \right] \]
+		若$f\left( x \right) ,g\left( x \right) $在同一点$x_0$处取得最大值,则\[F\left( a \right) =F\left( b \right) =F\left( x_0 \right) =0\]
+		由罗尔定理，结论是显然的。\\
+		若$f(x),g(x)$不在同一点处取到最大值,不妨设$f(x)$在$x_1$处取最大值, $g(x)$在$x_2$处取最大值,且$x_1<x_2$\\
+		则有\[F\left( x_1 \right) =f\left( x_1 \right) -g\left( x_1 \right) \geqslant 0\text{，}F\left( x_2 \right) =f\left( x_2 \right) -g\left( x_2 \right) \leqslant 0\]
+		因为$F(x)$在$\left[ x_1,x_2 \right] $上连续
+		由零点存在性定理得\[\exists x_0\in \left( x_1,x_2 \right) \]
+		使得\[F\left( x_0 \right) =0\]
+		故\[F\left( a \right) =F\left( b \right) =F\left( x_0 \right) =0\]
+		连续使用罗尔定理，结论成立
+	\end{newproof}
 
+%25
 \begin{example}
 	设$a_1$，$a_2$，$\cdots$，$a_n$为$n$个实数，并满足$a_1-\frac{a_2}{3}+\cdots+(-1)^n\frac{a_n}{2n-1}=0$，证明方程$a_1\cos x+a_2\cos 3x+\cdots+a_n\cos (2n-1)x=0$在$(0,\frac{\pi}{2})$至少有一实根。
 \end{example}
+	\begin{newproof}
+		令\[F\left( x \right) =a_1\sin x+\frac{a_2}{3}\sin 3x+\cdot \cdot \cdot \cdot +\frac{a_n}{2n-1}\sin \left( 2n-1 \right) x\]
+		有\[F\left( 0 \right) =0,F\left( \frac{\pi}{2} \right) =a_1-\frac{a_2}{3}+\cdot \cdot \cdot +\frac{a_n}{2n-1}\left( -1 \right) ^{n-1}=0\]
+		即\[F\left( 0 \right) =F\left( \frac{\pi}{2} \right) =0\]
+		又\[F\left( x \right) \text{在}\left[ o,\frac{\pi}{2} \right] \text{上连续，}\left( o,\frac{\pi}{2} \right) \text{可导}\]
+		由罗尔定理\[\exists \xi \in \left( o,\frac{\pi}{2} \right) \]
+		使得\[F'\left( \xi \right) =0\]
+		且\[F'\left( x \right) =a_1\cos x+a_2\cos 3x+\cdot \cdot +a_n\cos \left( 2n-1 \right) x\]
+		结论成立
+	\end{newproof}
 
+%26	
 \begin{example}
 	设$\frac{a_0}{n+1}+\frac{a_1}{n}+\cdots+\frac{a_{n-1}}{2}+a_n=0$，证明方程$a_0x^n+a_1x^{n-1}+\cdots+a_n=0$至少有一个不小于$1$的实根。
 \end{example}
+	\begin{newproof}
+		令\[F\left( x \right) =f\left( x \right) -g\left( x \right) \,\,   x\in \left[ a,b \right] \]
+		若$f\left( x \right) ,g\left( x \right) $在同一点$x_0$处取得最大值\\
+		则\[F\left( a \right) =F\left( b \right) =F\left( x \right) =0\]
+		由罗尔定理,结论是显然的.\\
+		若$f\left( x \right) ,g\left( x \right) $不在同一点取得最大值，不妨设$f\left( x \right) \text{在}x=x_1$处取最大值，$g\left( x \right) \text{在}x=x_2$处取最大值，且$x_1<x_2$，则有
+		\[F\left( x_1 \right) =f\left( x_1 \right) -g\left( x_1 \right) \geqslant 0\text{，}F\left( x_2 \right) =f\left( x_2 \right) -g\left( x_2 \right) \leqslant 0\]
+		因$F\left( x \right) \text{在}\left[ x_1,x_2 \right] $\\\
+		由零点存在定理\[\exists x_0\in \left( x_1,x_2 \right) \]
+		使得\[F\left( x_0 \right) =0\]
+		故\[F\left( a \right) =F\left( b \right) =F\left( x_0 \right) =0\]
+		连续使用罗尔定理，结论成立。
+	\end{newproof}
 
+%27
 \begin{example}
 	证明方程$2^x-x^2=1$有且仅有三个实根。
 \end{example}
+	\begin{newproof}
+		令\[F\left( x \right) =2^x-x^2-1\]
+		有\[F\left( 0 \right) =0,F\left( 1 \right) =0,F\left( 4 \right) =-1,F\left( 5 \right) =6>0\]
+		因\[F\left( 4 \right) \cdot F\left( 5 \right) <0\]
+		由零点存在定理，至少存在一点$\xi \in \left( 4,5 \right) $，使得\[F\left( \xi \right) =0\]
+		故$F\left( x \right) \text{至少存在三}个\text{实根}$\\
+		再证:$F\left( x \right) $仅有三个实根\\
+		若\[\exists x_1,x_2,x_3,x_4\]
+		使得\[F\left( x_1 \right) =F\left( x_2 \right) =F\left( x_3 \right) =F\left( x_4 \right) =0\]
+		其中$x_1,x_2,x_3,x_4$互不相等\\
+		由罗尔定理\[F'\left( x_{1}^{'} \right) =F'\left( x_{2}^{'} \right) =F'\left( x_{3}^{'} \right) =0 \Rightarrow F^{''}\left( x_{1}^{''} \right) =F^{''}\left( x_{2}^{''} \right) =0\Rightarrow F^{'''}\left( x_{0}^{'''} \right) =0\]
+		事实上\[F'\left( x \right) =\ln 2\cdot 2^x-2x\]
+		\[F^{''}\left( x \right) =\left( \ln 2 \right) ^2\cdot 2^x-2\]
+		\[F^{'''}\left( x \right) =\left( \ln 2 \right) ^3\cdot 2^x\ne 0\]
+		与$F^{'''}\left( x_{0}^{'''} \right) =0$矛盾,故$F(x)$仅三个零点。
+	\end{newproof}
 
+%28
 \begin{example}
 	若$f(x)$为可导函数，$g(x)$为连续函数，试证明在$f(x)$的两个零点之间，一定有$f'(x)-kf(x)g(x)=0$的零点。
 \end{example}
+	\begin{newproof}
+		设\[f\left( a \right) =f\left( b \right) =0\ \text{其中}a<b\]
+		令\[F\left( x \right) =f\left( x \right) e^{-k\int_a^x{g\left( t \right) dt}}\]
+		则有\[F\left( a \right) =F\left( b \right) =0\]
+		又\[F\left( x \right) \text{在}\left[ a,b \right] \text{连续},\left( a,b \right) \text{可导}\]
+		则由罗尔定理\[\exists \xi \in \left( a,b \right) \]
+		使得\[F'\left( \xi \right) =0\]
+		因\[F'\left( x \right) =e^{-k\int_a^x{g\left( t \right) dt}}\left[ f'\left( x \right) -kg\left( x \right) f\left( x \right) \right] \]
+		又\[e^{-k\int_a^{\xi}{g\left( t \right) dt}}>0\]
+		故\[F'\left( \xi \right) =0\Rightarrow f'\left( \xi \right) -kg\left( \xi \right) f\left( \xi \right) =0\]
+		命题得证
+	\end{newproof}
 
+%29
 \begin{example}
 	设$f(x)$在$[0,1]$上连续，在$(0,1)$内可导，且满足$f(1)=k\int_{a}^{b}xe^{1-x}f(x)\diff x(k>1)$，证明至少存在一点$\xi\in(0,1)$，使得$f'(\xi)=(1-\frac{1}{\xi})f(\xi)$。
 \end{example}
+	\begin{newproof}
+		由积分中值定理\[\exists x_0\in \left( 0,\frac{1}{k} \right) \]
+		使得\[\int_0^{\frac{1}{k}}{xe^{1-x}f\left( x \right) dx}=\frac{1}{k}x_0e^{1-x_0}f\left( x_0 \right) \]
+		令\[F\left( x \right) =xe^{1-x}f\left( x \right) \]
+		则\[F\left( 1 \right) =f\left( 1 \right) =k\cdot \frac{1}{k}x_0e^{1-x_0}f\left( x_0 \right) =F\left( x_0 \right) \]
+		又\[F\left( x \right) \text{在}\left[ x_0,1 \right] \text{连续}\]
+		使得\[F'\left( \xi \right) =0\]
+		由\[e^{1-\xi}>0,F'\left( \xi \right) =0\]
+		得\[\xi f'\left( \xi \right) =\left( \xi -1 \right) f\left( \xi \right) \]
+		又\[\xi \ne 0\]
+		故\[f'\left( \xi \right) =\left( \xi -1 \right) f\left( \xi \right) \]
+		得证
+	\end{newproof}
 
+%30
 \begin{example}
 	设$f(x)$，$g(x)$在$[a,b]$上连续，试证明存在$\xi\in(a,b)$，使得\[f(\xi)\int_{\xi}^{b}g(x)\diff x=g(\xi)\int_{a}^{\xi}f(x)\diff x\]
 \end{example}
-
+	\begin{newproof}
+		令\[F\left( x \right) =\int_a^x{f\left( t \right) dt}\int_x^b{g\left( t \right) dt}\]
+		由\[F\left( a \right) =F\left( b \right) =0\]
+		又\[F\left( x \right) \text{在}\left[ a,b \right] \text{连续，}\left( a,b \right) \text{内可导}\]
+		故由罗尔定理\[\exists \xi \in \left( a,b \right) \]
+		使\[F'\left( \xi \right) =0\]
+		即\[f\left( \xi \right) \int_{\xi}^b{g\left( x \right) dx}=g\left( \xi \right) \int_a^{\xi}{f\left( x \right) dx}\]
+	\end{newproof}
+	\begin{note}
+		\begin{align*}
+			f\left( \xi \right) \int_{\xi}^b{g\left( x \right) dx}=g\left( \xi \right) \int_a^{\xi}{f\left( x \right) dx}
+			\Longrightarrow {}&
+			\frac{\,\,f\left( \xi \right)}{\int_a^{\xi}{f\left( x \right) dx}}=\frac{g\left( \xi \right)}{\int_{\xi}^b{g\left( x \right) dx}}\\
+			\Longrightarrow {}&
+			\int{\frac{\,\,f\left( x \right)}{\int_a^x{f\left( t \right) dt}}dx}=\int{\frac{g\left( x \right)}{\int_x^b{g\left( t \right) dt}}dx}\\
+			\Longrightarrow {}&
+			ln|\int_a^x{f\left( t \right) dt}|=-\ln |\int_x^b{g\left( t \right) dt}|\\
+			\Longrightarrow {}&
+			\int_a^x{f\left( t \right) dt}\int_x^b{g\left( t \right) dt}=C
+		\end{align*}
+	\end{note}
 \begin{example}
 	已知函数$f(x)$在$[0,1]$上连续，在$(0,1)$内二阶可导，且$f(1)=0$，设函数$g(x)=x^2f(x)$，证明至少存在一点$\xi\in(0,1)$，使得$g''(\xi)=0$。
 \end{example}
