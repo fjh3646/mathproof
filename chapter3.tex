@@ -721,6 +721,7 @@
 	已知函数$f(x)$在$[0,1]$上连续，在$(0,1)$内二阶可导，且$f(1)=0$，设函数$g(x)=x^2f(x)$，证明至少存在一点$\xi\in(0,1)$，使得$g''(\xi)=0$。
 \end{example}
 
+%31
 \begin{example}
 	设$f(x)$在$[0,1]$上二阶可导，且$f(1)>0$，$\lim_{x\to 0^+}\frac{f(x)}{x}<0$，证明
 	\begin{enumerate}
@@ -728,11 +729,47 @@
 		\item 方程$f(x)f''(x)+[f'(x)]^2=0$在区间$(0,1)$内至少存在两个不同的实根。
 	\end{enumerate}
 \end{example}
+	\begin{newproof}
+		因\[g\left( 0 \right) =g\left( 1 \right) =0\text{且}g\left( x \right) \text{在}\left[ 0,1 \right] \text{连续，}\left( 0,1 \right) \text{可导}\]
+		则由罗尔定理\[\exists x_1\in \left( 0,1 \right) \]
+		使得\[g'\left( x_1 \right) =0\]
+		因\[g'\left( x \right) =2xf\left( x \right) +x^2f'\left( x \right) \]
+		故\[g'\left( 0 \right) =g'\left( x_1 \right) =0\]
+		又\[g'\left( x \right) \text{在}\left[ 0,x_1 \right] \text{连续，}\left( 0,x_1 \right) \text{可导}\]
+		则由罗尔定理\[\exists \xi \in \left( 0,x \right) \]
+		使得\[g''\left( \xi \right) =0\]
+		得证
+	\end{newproof}
 
+%32
 \begin{example}
 	已知函数$f(x)$在$[a,b]$上连续，在$(a,b)$内二阶可导，且$f(a)=f(b)$，$f'(x)\neq 0$，证明$\exists\xi\in(a,b)$，使得$[f'(\xi)]^2=f(\xi)f''(\xi)$。
 \end{example}
-
+	\begin{newproof}
+		\begin{enumerate}
+			\item \[\lim_{x\rightarrow 0^+} \frac{f\left( x \right)}{x}<0\Longleftrightarrow \exists \delta >0,\text{当}0<x<\delta \text{时，有}\frac{f\left( x \right)}{x}<0\]
+			故\[\exists x_0\in \left( 0,\delta \right) \]
+			使\[\frac{f\left( x_0 \right)}{x_0}<0\Longleftrightarrow f\left( x_0 \right) <0\]
+			又\[f\left( x_0 \right) <0,f\left( 1 \right) >0,f\left( x \right) \text{在}\left[ x,1 \right] \text{连续}\]
+			由零点存在定理\[\exists \xi \in \left( 0,1 \right) \]
+			使\[f\left( \xi \right) =0\]
+			\item 令\[F\left( x \right) =f\left( x \right) f'\left( x \right) \]
+			因$\lim_{x\rightarrow 0^+} \frac{f\left( x \right)}{x}\text{存在，且}f\left( x \right) \text{在}x=0\text{处连续}$\\
+			故\[f\left( 0 \right) =\lim_{x\rightarrow 0^+} f\left( x \right) =0\]
+			由拉格朗日中值定理\[\exists x_1\in \left( x_0,1 \right) \]
+			使\[f'\left( x_1 \right) =\frac{f\left( 1 \right) -f\left( x \right)}{1-x_0}>0\]
+			又\[\lim_{x\rightarrow 0^+} \frac{f\left( x \right)}{x}=\lim_{x\rightarrow 0^+} \frac{f\left( x \right) -f\left( 0 \right)}{x-0}=f'\left( 0 \right) <0 \text{且}f'\left( x \right) \text{在}\left[ 0,x_1 \right] \text{上连续}\]
+			由零点存在定理\[\exists x_2\in \left( 0,x_1 \right) \]
+			使\[f'\left( x_1 \right) =\frac{f\left( 1 \right) -f\left( x \right)}{1-x_0}>0\]
+			使\[f'\left( x_2 \right) =0\]
+			故\[F\left( 0 \right) =F\left( x_2 \right) =F\left( \xi \right) =0\]
+			由罗尔定理\[\exists x',x''\text{且}x'\ne x''\]
+			使\[F'\left( x' \right) =F'\left( x'' \right) =0\]
+			得证
+		\end{enumerate}
+	\end{newproof}
+	
+%34
 \begin{example}
 	$f(x)$在$[a,b]$上连续，在$(a,b)$内二阶可导，且$f(a)=f(b)=\int_{a}^{b}f(x)\diff x=0$，证明
 	\begin{enumerate}
